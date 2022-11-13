@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  axon:
+    platform: linux/amd64
+    image: axoniq/axonserver:latest
+    ports:
+      - 8024:8024
+      - 8124:8124
+    volumes:
+      - ./axonserver/data:/data
+      - ./axonserver/eventdata:/eventdata
+      - ./axonserver/config:/config
